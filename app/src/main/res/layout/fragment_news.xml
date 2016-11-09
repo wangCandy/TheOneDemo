@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_news_fragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/card_news_detail"
+        app:cardElevation="@dimen/dp_3"
+        android:layout_margin="@dimen/dp_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_5">
+
+
+            <ImageView
+                android:id="@+id/iv_title_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:scaleType="fitXY"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/rl_author_detail"
+                android:padding="@dimen/dp_5"
+                android:layout_below="@+id/iv_title_image">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_periodical"
+                    android:textSize="@dimen/little_text_font"
+                    tools:text="VOL.1474"
+                    android:textColor="@color/sub_title_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_author"
+                    android:textSize="@dimen/little_text_font"
+                    android:layout_alignParentRight="true"
+                    tools:text="凝望着远方 作品"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_periodical"
+                    android:id="@+id/tv_title"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:textColor="@color/title_color"
+                    android:maxLines="6"
+                    tools:text="为了寻找你，我搬进鸟的眼睛，经常盯着路过的风。  from 《路边的野餐》"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_current_date"
+                    android:textColor="@color/sub_title_color"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    tools:text="Thu 20 Oct.2016"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/dp_10"
+        android:id="@+id/rl_comment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_note"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:text="@string/note"
+            android:textColor="@color/sub_title_color"
+            android:textSize="@dimen/little_text_font"
+            android:drawableLeft="@mipmap/note"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_share"
+            android:id="@+id/ll_favorite"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/dp_40">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/heart"
+                android:layout_marginRight="@dimen/dp_10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_favorite"
+                android:gravity="center_vertical"
+                android:textColor="@color/sub_title_color"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/little_text_font"
+                tools:text="8120"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_share"
+            android:layout_marginRight="@dimen/dp_10"
+            android:src="@mipmap/share"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

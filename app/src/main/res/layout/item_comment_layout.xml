@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gary_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_comment"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:background="@color/app_background">
+
+        <include layout="@layout/author_layout"
+            android:id="@+id/author_info"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_touser"
+            android:orientation="vertical"
+            android:layout_below="@id/author_info"
+            android:layout_margin="@dimen/dp_10"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/head_background">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_touser_name"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/middle_text_font"
+                android:layout_marginBottom="@dimen/dp_3"
+                tools:text="测试："/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_touser_content"
+                android:textColor="@color/sub_title_color"
+                android:maxLines="2"
+                android:ellipsize="end"
+                />
+
+        </LinearLayout>
+
+
+        <com.wly.onedemo.view.TextViewExpandable
+            android:id="@+id/tv_comment_contain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:layout_below="@+id/ll_touser"
+            app:tv_expandLines="3"
+            app:tv_textContentColor="@color/news_detail_color"
+            app:tv_textExpand="@string/expand"
+            app:tv_textShrink="@string/shrink"
+            app:tv_textStateColor="@color/tabs_selector_color"
+            app:tv_textContentSize="15sp"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

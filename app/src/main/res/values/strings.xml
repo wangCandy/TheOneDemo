@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">OneDemo</string>
+
+    <string name="one_title">ONE</string>
+
+    <string name="note">小  记</string>
+
+    <!--首页-->
+    <string name="tabs_home">首页</string>
+    <string name="tabs_read">阅读</string>
+    <string name="tabs_music">音乐</string>
+    <string name="tabs_camera">电影</string>
+
+    <!--评分-->
+    <string name="movie_score">评分</string>
+    <string name="share_score">成绩单分享</string>
+    <string name="share_others">其他分享</string>
+
+    <!--电影信息-->
+    <string name="movie">一个 电影表</string>
+    <string name="movie_album">剧照</string>
+    <string name="movie_info">演职人员</string>
+
+
+    <string name="expand">展开</string>
+    <string name="shrink">收起</string>
+    <string name="tips">This is a custom TextView that can be expanded with a smooth transition animation,you can set the number of lines to expand,change its icon or text and so on\n</string>
+    <string name="load_more">正在加载更多数据......</string>
+
+</resources>

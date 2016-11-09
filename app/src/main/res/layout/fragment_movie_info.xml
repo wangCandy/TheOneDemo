@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gary_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gary_background"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="@string/movie"
+            android:id="@+id/tv_movie_info_title"
+            android:padding="@dimen/dp_10"
+            android:textColor="@color/sub_title_color"
+            android:textSize="@dimen/little_text_font"/>
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_5"
+            android:id="@+id/rg_movie_info">
+
+            <RadioButton
+                style="@style/bottom_radio_style"
+                android:drawableTop="@drawable/tabs_movie_selected"
+                android:id="@+id/tabs_movie"
+                android:checked="true"/>
+
+            <RadioButton
+                style="@style/bottom_radio_style"
+                android:drawableTop="@drawable/tabs_movie_album_selected"
+                android:id="@+id/tabs_movie_album"/>
+
+            <RadioButton
+                style="@style/bottom_radio_style"
+                android:drawableTop="@drawable/tabs_movie_info_selected"
+                android:id="@+id/tabs_movie_info"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--关键词-->
+        <me.next.tagview.TagCloudView
+            android:id="@+id/keyword_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_tags_selector"
+            app:tcvTextColor="@color/tabs_selector_color"
+            android:padding="@dimen/dp_3"
+            app:tcvCanTagClick="true">
+
+        </me.next.tagview.TagCloudView>
+
+
+        <!--剧照-->
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:id="@+id/scroll_album">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll_album">
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!--演职名单-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_background"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingBottom="@dimen/dp_15"
+            android:paddingLeft="@dimen/dp_10"
+            android:id="@+id/tv_movie_info"
+            android:textColor="@color/news_detail_color"
+            android:textSize="@dimen/little_text_font"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextViewExpandable">
+        <attr name="tv_expandLines" format="integer" />
+        <attr name="tv_textStateColor" format="color" />
+        <attr name="tv_textContentColor" format="color" />
+        <attr name="tv_textContentSize" format="dimension" />
+        <attr name="tv_textShrink" format="string" />
+        <attr name="tv_textExpand" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingView">
+        <attr name="lv_external_radius" format="dimension"/>
+        <attr name="lv_internal_radius" format="dimension"/>
+        <attr name="lv_duration" format="integer"/>
+        <attr name="lv_start_color" format="color"/>
+        <attr name="lv_end_color" format="color"/>
+    </declare-styleable>
+</resources>

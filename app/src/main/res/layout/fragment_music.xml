@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wly.onedemo.view.LoadingView
+        android:id="@+id/loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:lv_duration="10"
+        app:lv_end_color="@color/loading_yellow"
+        app:lv_start_color="@color/loading_pink"
+        app:lv_external_radius="20dp"
+        app:lv_internal_radius="3dp"/>
+
+</LinearLayout>

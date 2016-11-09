@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <include layout="@layout/head_layout"
+        android:id="@+id/header"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_contain"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/tabs_bottom">
+    </FrameLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/head_background"
+        android:id="@+id/tabs_bottom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            style="@style/bottom_radio_style"
+            android:checked="true"
+            android:id="@+id/tabs_home"
+            android:drawableTop="@drawable/tabs_home_selected"
+            android:text="@string/tabs_home"/>
+
+        <RadioButton
+            style="@style/bottom_radio_style"
+            android:id="@+id/tabs_read"
+            android:drawableTop="@drawable/tabs_read_selected"
+            android:text="@string/tabs_read"/>
+
+        <RadioButton
+            style="@style/bottom_radio_style"
+            android:id="@+id/tabs_music"
+            android:drawableTop="@drawable/tabs_music_selected"
+            android:text="@string/tabs_music"/>
+
+        <RadioButton
+            style="@style/bottom_radio_style"
+            android:id="@+id/tabs_camera"
+            android:drawableTop="@drawable/tabs_camera_selected"
+            android:text="@string/tabs_camera"/>
+
+    </RadioGroup>
+
+</RelativeLayout>

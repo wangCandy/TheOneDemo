@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="radio_style">
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+
+    </style>
+
+    <style name="bottom_radio_style" parent="radio_style">
+        <item name="android:paddingTop">@dimen/dp_3</item>
+        <item name="android:textColor">@drawable/tabs_title_selected_color</item>
+    </style>
+
+    <!--首页查看图片-->
+    <style name="popup_animation_style">
+        <item name="android:windowExitAnimation">@anim/popup_exit_animation</item>
+    </style>
+
+    <!--电影查看图片-->
+    <style name="popup_movie_animation_style">
+        <item name="android:windowExitAnimation">@anim/popup_movie_image_exit_animation</item>
+        <item name="android:windowEnterAnimation">@anim/popup_movie_image_enter_animation</item>
+    </style>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+
+</resources>

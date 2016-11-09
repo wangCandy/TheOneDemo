@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_author_layout"
+            android:padding="@dimen/dp_10">
+
+            <!--作者头像-->
+            <com.wly.onedemo.view.CircleImageView
+                android:layout_width="@dimen/author_avatar_width"
+                android:layout_height="@dimen/author_avatar_width"
+                android:src="@mipmap/shopping_cart_not_logined"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:id="@+id/iv_author_avatar"/>
+
+            <!--作者描述-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_author_avatar"
+                android:id="@+id/ll_author_info"
+                android:layout_toLeftOf="@+id/ll_essay_favorite"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_author_name"
+                    android:textColor="@color/tabs_selector_color"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    tools:text="吴品儒"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_author_detail"
+                    android:textColor="@color/sub_title_color"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:lines="2"
+                    tools:text="慢三，作家。自诩治愈系领军人物，负能量传播使者"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_essay_date"
+                    android:textColor="@color/sub_title_color"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    tools:text="weibo:@慢三"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_essay_favorite"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/heart"
+                    android:id="@+id/iv_essay_favorite"
+                    android:layout_marginRight="@dimen/dp_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_essay_favorite"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/sub_title_color"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/little_text_font"
+                    tools:text="8120"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
