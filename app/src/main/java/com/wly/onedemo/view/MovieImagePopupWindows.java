@@ -29,6 +29,8 @@ public class MovieImagePopupWindows extends PopupWindow {
 
     private View convertView;
 
+    //测试添加
+
     private LinearLayout mContain;
 
     private ViewPager mMovieImageViewPager;
